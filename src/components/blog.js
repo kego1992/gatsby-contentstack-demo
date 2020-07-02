@@ -20,7 +20,7 @@ const BlogPage = ({ data }) => {
             <div className="author">
               By:{' '}
               {blog.authors.map(author => {
-                return <span key={author.id}>{author.name}</span>
+                return <span key={author.uid}>{author.name}</span>
               })}
             </div>
           </section>
@@ -40,7 +40,7 @@ export const pageQuery = graphql`
       url
       description
       authors {
-        id
+        uid
         name
       }
     }
